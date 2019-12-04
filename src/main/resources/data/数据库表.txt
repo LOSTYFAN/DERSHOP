@@ -1,0 +1,75 @@
+t_user 用户表
+userid         int
+username 用户名      varchar
+password 密码         varchar
+realname 真实姓名   varchar
+email 邮件                  varchar
+phone 手机号码     varchar
+sex 性别               sex  1男 2女
+birthday 出生日期   date
+
+
+t_address 地址表
+addid 地址表id  int
+userid 用户表id  int
+provinceid 省份表id   int 
+cityid 城市表id   int 
+areaid 区县表id   int 
+streetid 街道表id  int
+finaladdress   varchar
+
+
+t_order 订单表
+orderid 订单号 varchar
+userid 用户id   int 
+createtime 下单时间  datetime
+paystatus 付款状态 int 2已付款 1未付款
+Totalprice 总价 double
+content 备注 varchar
+
+t_orderdetail 订单明细表
+orderdetailid 订单明细表id
+orderid 订单表id varchar
+itemsid 商品信息表id
+num 数量
+
+
+t_shopcart 购物车表
+shopcartid 购物车表id
+userid 用户表id 
+itemid 商品信息表id
+num 数量
+
+
+t_items 商品信息表
+itemsid 商品id
+itemsname 商品名称
+itemsdes 商品描述
+itemsBrand 商品品牌
+itemstype 商品类型
+price 价格
+pic 图片地址
+
+
+t_province 省
+provinceid
+province
+
+
+t_city 市
+cityid
+city
+father
+
+t_area 区县
+areaid
+area
+father
+
+t_street 街道
+streetid
+street
+father
+
+
+
