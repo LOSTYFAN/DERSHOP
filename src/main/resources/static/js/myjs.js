@@ -255,9 +255,5 @@ function PayHidden(){
 
 //验证码切换
 function swichCode(){
-	
-	var imgArry = ["yzm01.jpg","yzm02.jpg","yzm03.jpg","yzm04.jpg","yzm05.jpg","yzm06.jpg"];
-	var ranNum = Math.floor(Math.random()*6);console.log(ranNum);
-	$("#code").siblings("span").find("img").attr("src","img/"+imgArry[ranNum])
-	
+	$("#code").siblings("span").find("img").attr("src","/code?"+new Date())
 }

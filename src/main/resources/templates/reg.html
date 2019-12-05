@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="utf-8" />
 		<title>注册页</title>
-		<link rel="stylesheet" type="text/css" href="css/common.css"/>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<link rel="stylesheet" type="text/css" href="css/register.css"/>
-		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/myjs.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/check.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../static/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/register.css"/>
+		<script src="../static/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/js/myjs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/js/check.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body onload="swichCode()">
 		<div class="header">
 			<div class="container">
 				<p>您好，欢迎来到德尔商城！</p>
 				<ul>
-					<li><a href="login.html">登录</a>/<a href="reg.html">注册</a></li>
+					<li><a th:href="@{/toLogin}">登录</a>/<a href="reg.html">注册</a></li>
 					<li><a href="shop_cart.html">购物车<i id="car_num">0</i></a></li>
 					<li><a href="order.html">我的订单</a></li>
 					<li><a href="###">企业采购</a></li>
@@ -26,11 +26,11 @@
 		<div class="logo_serach">
 			<div class="container">
 				<div class="logo">
-					<a href="index.html"><img src="img/logo.jpg"/></a>
+					<a href="index.html"><img src="../static/img/logo.jpg"/></a>
 				</div>
 				<form class="serach">
 					<input type="search" name="" id="" value="" />
-					<button type="submit"><img src="img/icon_search.png"/></button>
+					<button type="submit"><img src="../static/img/icon_search.png"/></button>
 				</form>
 			</div>
 		</div>
@@ -38,12 +38,12 @@
 			<div class="container">
 				<div class="dropdown">
 					<div class="dropdown_btn">
-						<img src="img/icon_list.png"/>
+						<img src="../static/img/icon_list.png"/>
 						<span>商品类型</span>
 					</div>
 					<div class="dropdown_menu hidden">
 						<ol>
-								<li class="dropdown_header"><img src="img/icon_dfg.png" alt="" />厨房小电器</li>
+								<li class="dropdown_header"><img src="../static/img/icon_dfg.png" alt="" />厨房小电器</li>
 								<li><a href="shop_list.html">电饭煲</a></li>
 								<li><a href="shop_list.html">电磁炉</a></li>
 								<li><a href="shop_list.html">电蒸锅</a></li>
@@ -52,7 +52,7 @@
 								<li><a href="shop_list.html">面包机</a></li>
 							</ol>
 							<ol>
-								<li class="dropdown_header"><img src="img/icon_xyyj.png" alt="" />厨卫电器</li>
+								<li class="dropdown_header"><img src="../static/img/icon_xyyj.png" alt="" />厨卫电器</li>
 								<li><a href="shop_list.html">燃气炉</a></li>
 								<li><a href="shop_list.html">吸油烟机</a></li>
 								<li><a href="shop_list.html">消毒柜</a></li>
@@ -60,7 +60,7 @@
 								<li><a href="shop_list.html">净水器</a></li>
 							</ol>
 							<ol>
-								<li class="dropdown_header"><img src="img/icon_tg.png"/>炊具</li>
+								<li class="dropdown_header"><img src="../static/img/icon_tg.png"/>炊具</li>
 								<li><a href="shop_list.html">铲勺</a></li>
 								<li><a href="shop_list.html">提锅</a></li>
 								<li><a href="shop_list.html">水壶</a></li>
@@ -115,13 +115,13 @@
 					<div>
 						<input type="text" name="" id="code" value="" required/>
 						<span>
-							<a href="###" onclick="swichCode()"><img src="img/yzm01.jpg"/></a>
+							<a href="###" onclick="swichCode()"><img src="../static/img/yzm01.jpg"/></a>
 							<a href="###" onclick="swichCode()">看不清，换一张</a>
 						</span>
 						<i></i>
 					</div>
 					<div>
-						<img src="img/no_tick.png" class="tick"/>
+						<img src="../static/img/no_tick.png" class="tick"/>
 						<small>阅读并同意<a href="###">《德尔用户注册协议》</a></small>
 						<i></i>
 					</div>
@@ -134,15 +134,15 @@
 				<h3>已有账号，直接登录</h3>
 				<ol>
 					<li>
-						<img src="img/icon_qq.png"/>
+						<img src="../static/img/icon_qq.png"/>
 						<a href="###">使用QQ登录</a>
 					</li>
 					<li>
-						<img src="img/icon_wb.png"/>
+						<img src="../static/img/icon_wb.png"/>
 						<a href="###">使用新浪微博登录</a>
 					</li>
 					<li>
-						<img src="img/icon_wx.png"/>
+						<img src="../static/img/icon_wx.png"/>
 						<a href="###">使用微信登录</a>
 					</li>
 				</ol>
@@ -152,23 +152,23 @@
 			<div class="container">
 				<ul>
 					<li>
-						<img src="img/icon_quality.jpg"/>
+						<img src="../static/img/icon_quality.jpg"/>
 						<h1>品质保证</h1>
 					</li>
 					<li>
-						<img src="img/icon_blitz.jpg"/>
+						<img src="../static/img/icon_blitz.jpg"/>
 						<h1>闪电发货</h1>
 					</li>
 					<li>
-						<img src="img/icon_seven.jpg"/>
+						<img src="../static/img/icon_seven.jpg"/>
 						<h1>7天无理由退货</h1>
 					</li>
 					<li>
-						<img src="img/icon_complete.jpg"/>
+						<img src="../static/img/icon_complete.jpg"/>
 						<h1>品类齐全</h1>
 					</li>
 					<li>
-						<img src="img/icon_service.jpg"/>
+						<img src="../static/img/icon_service.jpg"/>
 						<h1>品类齐全</h1>
 					</li>
 				</ul>
@@ -199,7 +199,7 @@
 				</ol>
 				<ol>
 					<li><h2>扫一扫</h2></li>
-					<li><img src="img/ewm.jpg" alt="" /></li>
+					<li><img src="../static/img/ewm.jpg" alt="" /></li>
 				</ol>
 			</div>
 		</div>

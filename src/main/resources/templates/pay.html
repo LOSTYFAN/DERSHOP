@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="utf-8" />
 		<title>支付页</title>
-		<link rel="stylesheet" type="text/css" href="css/common.css"/>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<link rel="stylesheet" type="text/css" href="css/pay.css"/>
-		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/localStorage.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/myjs.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/pay.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../static/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/pay.css"/>
+		<script src="../static/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/js/localStorage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/js/myjs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/js/pay.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div class="header">
 			<div class="container">
 				<p>您好，欢迎来到德尔商城！</p>
 				<ul>
-					<li><a href="login.html">登录</a>/<a href="reg.html">注册</a></li>
+					<li><a th:href="@{/toLogin}">登录</a>/<a href="reg.html">注册</a></li>
 					<li><a href="shop_cart.html">购物车<i id="car_num">0</i></a></li>
 					<li><a href="order.html">我的订单</a></li>
 					<li><a href="###">企业采购</a></li>
@@ -27,11 +27,11 @@
 		<div class="logo_serach">
 			<div class="container">
 				<div class="logo">
-					<a href="index.html"><img src="img/logo.jpg"/></a>
+					<a href="index.html"><img src="../static/img/logo.jpg"/></a>
 				</div>
 				<form class="serach">
 					<input type="search" name="" id="" value="" />
-					<button type="submit"><img src="img/icon_search.png"/></button>
+					<button type="submit"><img src="../static/img/icon_search.png"/></button>
 				</form>
 			</div>
 		</div>
@@ -39,12 +39,12 @@
 			<div class="container">
 				<div class="dropdown">
 					<div class="dropdown_btn">
-						<img src="img/icon_list.png"/>
+						<img src="../static/img/icon_list.png"/>
 						<span>商品类型</span>
 					</div>
 					<div class="dropdown_menu hidden">
 						<ol>
-								<li class="dropdown_header"><img src="img/icon_dfg.png" alt="" />厨房小电器</li>
+								<li class="dropdown_header"><img src="../static/img/icon_dfg.png" alt="" />厨房小电器</li>
 								<li><a href="shop_list.html">电饭煲</a></li>
 								<li><a href="shop_list.html">电磁炉</a></li>
 								<li><a href="shop_list.html">电蒸锅</a></li>
@@ -53,7 +53,7 @@
 								<li><a href="shop_list.html">面包机</a></li>
 							</ol>
 							<ol>
-								<li class="dropdown_header"><img src="img/icon_xyyj.png" alt="" />厨卫电器</li>
+								<li class="dropdown_header"><img src="../static/img/icon_xyyj.png" alt="" />厨卫电器</li>
 								<li><a href="shop_list.html">燃气炉</a></li>
 								<li><a href="shop_list.html">吸油烟机</a></li>
 								<li><a href="shop_list.html">消毒柜</a></li>
@@ -61,7 +61,7 @@
 								<li><a href="shop_list.html">净水器</a></li>
 							</ol>
 							<ol>
-								<li class="dropdown_header"><img src="img/icon_tg.png"/>炊具</li>
+								<li class="dropdown_header"><img src="../static/img/icon_tg.png"/>炊具</li>
 								<li><a href="shop_list.html">铲勺</a></li>
 								<li><a href="shop_list.html">提锅</a></li>
 								<li><a href="shop_list.html">水壶</a></li>
@@ -114,7 +114,7 @@
 				</ol>
 			</div>
 			<div class="order">
-				<img src="img/pay_success.jpg"/>
+				<img src="../static/img/pay_success.jpg"/>
 				<div class="order_con">
 					<h1>订单提交成功!</h1>
 					<p>订单号为2135468121453，请你在24个小时内完成付款（逾期订单将自动取消）</p>
@@ -129,14 +129,14 @@
 					<ol>
 						<li>
 							<a href="###">
-								<img src="img/select.png"/>
-								<img src="img/pay_zfb.jpg"/>
+								<img src="../static/img/select.png"/>
+								<img src="../static/img/pay_zfb.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_wx.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_wx.jpg"/>
 							</a>
 						</li>
 					</ol>
@@ -146,110 +146,110 @@
 					<ul>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_01.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_01.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_02.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_02.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_03.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_03.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_04.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_04.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_05.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_05.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_06.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_06.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_07.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_07.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_08.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_08.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_09.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_09.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_10.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_10.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_11.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_11.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_12.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_12.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_13.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_13.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_14.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_14.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_15.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_15.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_16.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_16.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_17.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_17.jpg"/>
 							</a>
 						</li>
 						<li>
 							<a href="###">
-								<img src="img/no_select.png"/>
-								<img src="img/pay_18.jpg"/>
+								<img src="../static/img/no_select.png"/>
+								<img src="../static/img/pay_18.jpg"/>
 							</a>
 						</li>
 					</ul>
@@ -263,23 +263,23 @@
 			<div class="container">
 				<ul>
 					<li>
-						<img src="img/icon_quality.jpg"/>
+						<img src="../static/img/icon_quality.jpg"/>
 						<h1>品质保证</h1>
 					</li>
 					<li>
-						<img src="img/icon_blitz.jpg"/>
+						<img src="../static/img/icon_blitz.jpg"/>
 						<h1>闪电发货</h1>
 					</li>
 					<li>
-						<img src="img/icon_seven.jpg"/>
+						<img src="../static/img/icon_seven.jpg"/>
 						<h1>7天无理由退货</h1>
 					</li>
 					<li>
-						<img src="img/icon_complete.jpg"/>
+						<img src="../static/img/icon_complete.jpg"/>
 						<h1>品类齐全</h1>
 					</li>
 					<li>
-						<img src="img/icon_service.jpg"/>
+						<img src="../static/img/icon_service.jpg"/>
 						<h1>品类齐全</h1>
 					</li>
 				</ul>
@@ -310,7 +310,7 @@
 				</ol>
 				<ol>
 					<li><h2>扫一扫</h2></li>
-					<li><img src="img/ewm.jpg" alt="" /></li>
+					<li><img src="../static/img/ewm.jpg" alt="" /></li>
 				</ol>
 			</div>
 		</div>

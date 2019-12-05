@@ -48,7 +48,7 @@
 .hot_pro h2{box-shadow: 1px 1px 10px -3px;font-size: 22px;color: #333333;background: #FFFFFF;height: 70px;padding-left: 30px;border-radius: 5px;line-height: 70px;margin: 20px 0;}
 .hot_pro ul{margin-left: -10px;margin-top: 40px;}
 .hot_pro ul li{float: left;font-size: 22px;line-height: 30px;padding-bottom: 30px;background: #FFFFFF;text-align: center;margin:0 0 10px 10px;width: 290px;overflow: hidden;}
-.hot_pro ul li span{color: #373737;font-size: ;}
+.hot_pro ul li span{color: #373737;font-size: 22px;}
 .hot_pro ul li small{display: block;color: #666666;font-size: 20px;}
 .hot_pro ul li b{color: #ff3939;font-weight: normal;}
 .hot_pro ul li:hover a>*{color: #ff3333;}
@@ -93,6 +93,6 @@
 .pro_details .comment .submit_conmment form textarea{width: 778px;height: 140px;}
 .pro_details .comment .submit_conmment form a{margin-left: 265px;color: inherit;}
 .pro_details .comment .submit_conmment form span{position: relative;left: 3px;top: -2px;}
-.pro_details .comment .submit_conmment form button{cursor: pointer;float: right;margin-top: 15px;font-size: 16px;border: 1px solid #00AB53;background: #FFFFFF;width: 150px;32px;}
+.pro_details .comment .submit_conmment form button{cursor: pointer;float: right;margin-top: 15px;font-size: 16px;border: 1px solid #00AB53;background: #FFFFFF;width: 150px;height: 32px;}
 
 

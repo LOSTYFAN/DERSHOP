@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="utf-8" />
 		<title>首页</title>
-		<link rel="stylesheet" type="text/css" href="css/common.css"/>
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
-		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/index_banner.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/localStorage.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/product.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/myjs.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../static/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/index.css"/>
+		<script src="../static/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/js/index_banner.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/js/localStorage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/js/product.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/js/myjs.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div class="header">
 			<div class="container">
-				<p>您好，欢迎来到德尔商城！</p>
+				<p th:text="${session.user.realname}+'您好，欢迎来到德尔商城！'">您好，欢迎来到德尔商城！</p>
 				<ul>
-					<li><a href="login.html">登录</a>/<a href="reg.html">注册</a></li>
+					<li><a th:href="@{/toLogin}">登录</a>/<a href="reg.html">注册</a></li>
 					<li><a href="shop_cart.html">购物车<i id="car_num">0</i></a></li>
 					<li><a href="order.html">我的订单</a></li>
 					<li><a href="###">企业采购</a></li>
@@ -27,11 +27,11 @@
 		<div class="logo_serach">
 			<div class="container">
 				<div class="logo">
-					<a href="index.html"><img src="img/logo.jpg"/></a>
+					<a href="index.html"><img src="../static/img/logo.jpg"/></a>
 				</div>
 				<form class="serach">
 					<input type="search" name="" id="" value="" />
-					<button type="submit"><img src="img/icon_search.png"/></button>
+					<button type="submit"><img src="../static/img/icon_search.png"/></button>
 				</form>
 			</div>
 		</div>
@@ -39,12 +39,12 @@
 			<div class="container">
 				<div class="dropdown">
 					<div class="dropdown_btn">
-						<img src="img/icon_list.png"/>
+						<img src="../static/img/icon_list.png"/>
 						<span>商品类型</span>
 					</div>
 					<div class="dropdown_menu">
 						<ol>
-								<li class="dropdown_header"><img src="img/icon_dfg.png" alt="" />厨房小电器</li>
+								<li class="dropdown_header"><img src="../static/img/icon_dfg.png" alt="" />厨房小电器</li>
 								<li><a href="shop_list.html">电饭煲</a></li>
 								<li><a href="shop_list.html">电磁炉</a></li>
 								<li><a href="shop_list.html">电蒸锅</a></li>
@@ -53,7 +53,7 @@
 								<li><a href="shop_list.html">面包机</a></li>
 							</ol>
 							<ol>
-								<li class="dropdown_header"><img src="img/icon_xyyj.png" alt="" />厨卫电器</li>
+								<li class="dropdown_header"><img src="../static/img/icon_xyyj.png" alt="" />厨卫电器</li>
 								<li><a href="shop_list.html">燃气炉</a></li>
 								<li><a href="shop_list.html">吸油烟机</a></li>
 								<li><a href="shop_list.html">消毒柜</a></li>
@@ -61,7 +61,7 @@
 								<li><a href="shop_list.html">净水器</a></li>
 							</ol>
 							<ol>
-								<li class="dropdown_header"><img src="img/icon_tg.png"/>炊具</li>
+								<li class="dropdown_header"><img src="../static/img/icon_tg.png"/>炊具</li>
 								<li><a href="shop_list.html">铲勺</a></li>
 								<li><a href="shop_list.html">提锅</a></li>
 								<li><a href="shop_list.html">水壶</a></li>
@@ -87,9 +87,9 @@
 		<div class="banner">
 			<div class="bd">
 				<ul>
-					<li><a href="###"><img src="img/index_banner01.jpg"/></a></li>
-					<li><a href="###"><img src="img/index_banner02.jpg"/></a></li>
-					<li><a href="###"><img src="img/index_banner03.jpg"/></a></li>
+					<li><a href="###"><img src="../static/img/index_banner01.jpg"/></a></li>
+					<li><a href="###"><img src="../static/img/index_banner02.jpg"/></a></li>
+					<li><a href="###"><img src="../static/img/index_banner03.jpg"/></a></li>
 				</ul>
 			</div>
 			<div class="hd">
@@ -104,28 +104,28 @@
 				<h2>最新产品</h2>
 				<ul class="pro_list">
 					<li>
-						<a href="pro_details.html"><img src="img/new_pro01.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/new_pro01.jpg" alt="" />
 							<span>吸油烟机</span>
 							<small>德尔CFXB43-75</small>
 							<b>￥3599</b>
 						</a>
 					</li>
 					<li>
-						<a href="pro_details.html"><img src="img/new_pro02.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/new_pro02.jpg" alt="" />
 							<span>智能电饭煲</span>
 							<small>德尔CFXB43-75</small>
 							<b>￥589</b>
 						</a>
 					</li>
 					<li>
-						<a href="pro_details.html"><img src="img/new_pro03.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/new_pro03.jpg" alt="" />
 							<span>矢量电磁炉</span>
 							<small>德尔CFXB43-75</small>
 							<b>￥1399</b>
 						</a>
 					</li>
 					<li>
-						<a href="pro_details.html"><img src="img/new_pro04.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/new_pro04.jpg" alt="" />
 							<span>高温消毒柜</span>
 							<small>德尔CFXB43-75</small>
 							<b>￥1899</b>
@@ -135,7 +135,7 @@
 			</div>
 			<div class="clear"></div>
 			<div class="advert">
-				<a href="pro_details.html"><img src="img/advert_01.jpg"/></a>
+				<a href="pro_details.html"><img src="../static/img/advert_01.jpg"/></a>
 			</div>
 		</div>
 		<div class="section">
@@ -144,7 +144,7 @@
 				<ol class="pro_list">
 					<li>
 						<a href="pro_details.html">
-							<img src="img/hot_pro01.jpg" alt="" />
+							<img src="../static/img/hot_pro01.jpg" alt="" />
 							<span>家用油烟机+电磁炉</span>
 							<small>德尔CFXB43-75</small>
 							<b>￥4999</b>
@@ -152,28 +152,28 @@
 					</li>
 					<li>
 						<a href="pro_details.html">
-							<img src="img/hot_pro02.jpg" alt="" />
+							<img src="../static/img/hot_pro02.jpg" alt="" />
 							<span>半自动微波炉</span>
 							<b>￥668</b>
 						</a>
 					</li>
 					<li>
 						<a href="pro_details.html">
-							<img src="img/hot_pro03.jpg" alt="" />
+							<img src="../static/img/hot_pro03.jpg" alt="" />
 							<span>智能电饭煲</span>
 							<b>￥399</b>
 						</a>
 					</li>
 					<li>
 						<a href="pro_details.html">
-							<img src="img/hot_pro04.jpg" alt="" />
+							<img src="../static/img/hot_pro04.jpg" alt="" />
 							<span>面包机</span>
 							<b>￥299</b>
 						</a>
 					</li>
 					<li>
 						<a href="pro_details.html">
-							<img src="img/hot_pro05.jpg" alt="" />
+							<img src="../static/img/hot_pro05.jpg" alt="" />
 							<span>磨煮一体咖啡机</span>
 							<b>￥998</b>
 						</a>
@@ -182,7 +182,7 @@
 				<div class="clear"></div>
 			</div>
 			<div class="advert">
-				<a href="pro_details.html"><img src="img/advert_02.jpg"/></a>
+				<a href="pro_details.html"><img src="../static/img/advert_02.jpg"/></a>
 			</div>
 		</div>
 		<div class="section">
@@ -190,32 +190,32 @@
 				<h2>推荐商品</h2>
 				<ol class="pro_list">
 					<li>
-						<a href="pro_details.html"><img src="img/rec_pro01.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/rec_pro01.jpg" alt="" />
 							<span>家用智能搅拌机</span>
 							<small>德尔CFXB43-75</small>
 							<b>￥499</b>
 						</a>
 					</li>
 					<li>
-						<a href="pro_details.html"><img src="img/rec_pro02.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/rec_pro02.jpg" alt="" />
 							<span>电压力锅</span>
 							<b>￥299</b>
 						</a>
 					</li>
 					<li>
-						<a href="pro_details.html"><img src="img/rec_pro03.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/rec_pro03.jpg" alt="" />
 							<span>智能电饭锅</span>
 							<b>￥399</b>
 						</a>
 					</li>
 					<li>
-						<a href="pro_details.html"><img src="img/rec_pro04.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/rec_pro04.jpg" alt="" />
 							<span>智能电磁炉</span>
 							<b>￥399</b>
 						</a>
 					</li>
 					<li>
-						<a href="pro_details.html"><img src="img/rec_pro04.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/rec_pro04.jpg" alt="" />
 							<span>电热水壶</span>
 							<b>￥199</b>
 						</a>
@@ -224,7 +224,7 @@
 			</div>
 			<div class="clear"></div>
 			<div class="advert">
-				<a href="pro_details.html"><img src="img/advert_03.jpg"/></a>
+				<a href="pro_details.html"><img src="../static/img/advert_03.jpg"/></a>
 			</div>
 		</div>
 		<div class="section">
@@ -232,32 +232,32 @@
 				<h2>爆款推荐</h2>
 				<ol class="pro_list">
 					<li>
-						<a href="pro_details.html"><img src="img/hot_rec_01.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/hot_rec_01.jpg" alt="" />
 							<span>家用智能电磁炉+平底锅</span>
 							<small>德尔CFXB43-75</small>
 							<b>￥399</b>
 						</a>
 					</li>
 					<li>
-						<a href="pro_details.html"><img src="img/hot_rec_02.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/hot_rec_02.jpg" alt="" />
 							<span>智能家用油烟机</span>
 							<b>￥1999</b>
 						</a>
 					</li>
 					<li>
-						<a href="pro_details.html"><img src="img/hot_rec_03.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/hot_rec_03.jpg" alt="" />
 							<span>家用电磁炉</span>
 							<b>￥2000</b>
 						</a>
 					</li>
 					<li>
-						<a href="pro_details.html"><img src="img/hot_rec_04.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/hot_rec_04.jpg" alt="" />
 							<span>家用消毒柜</span>
 							<b>￥2999</b>
 						</a>
 					</li>
 					<li>
-						<a href="pro_details.html"><img src="img/hot_rec_05.jpg" alt="" />
+						<a href="pro_details.html"><img src="../static/img/hot_rec_05.jpg" alt="" />
 							<span>家用电火锅</span>
 							<b>￥599</b>
 						</a>
@@ -270,23 +270,23 @@
 			<div class="container">
 				<ul>
 					<li>
-						<img src="img/icon_quality.jpg"/>
+						<img src="../static/img/icon_quality.jpg"/>
 						<h1>品质保证</h1>
 					</li>
 					<li>
-						<img src="img/icon_blitz.jpg"/>
+						<img src="../static/img/icon_blitz.jpg"/>
 						<h1>闪电发货</h1>
 					</li>
 					<li>
-						<img src="img/icon_seven.jpg"/>
+						<img src="../static/img/icon_seven.jpg"/>
 						<h1>7天无理由退货</h1>
 					</li>
 					<li>
-						<img src="img/icon_complete.jpg"/>
+						<img src="../static/img/icon_complete.jpg"/>
 						<h1>品类齐全</h1>
 					</li>
 					<li>
-						<img src="img/icon_service.jpg"/>
+						<img src="../static/img/icon_service.jpg"/>
 						<h1>品类齐全</h1>
 					</li>
 				</ul>
@@ -317,7 +317,7 @@
 				</ol>
 				<ol>
 					<li><h2>扫一扫</h2></li>
-					<li><img src="img/ewm.jpg" alt="" /></li>
+					<li><img src="../static/img/ewm.jpg" alt="" /></li>
 				</ol>
 			</div>
 		</div>

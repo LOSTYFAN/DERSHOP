@@ -35,7 +35,7 @@
 
 .middle .pro_list ul{margin-left: -10px;}
 .middle .pro_list ul li{float: left;font-size: 22px;line-height: 30px;padding-bottom: 30px;background: #FFFFFF;text-align: center;margin:0 0 10px 10px;width: 290px;overflow: hidden;}
-.middle .pro_list ul li span{color: #373737;font-size: ;}
+.middle .pro_list ul li span{color: #373737;font-size:22px ;}
 .middle .pro_list ul li small{display: block;color: #666666;font-size: 20px;}
 .middle .pro_list ul li b{color: #ff3939;font-weight: normal;}
 .middle .pro_list ul li:hover a>*{color: #ff3333;}
