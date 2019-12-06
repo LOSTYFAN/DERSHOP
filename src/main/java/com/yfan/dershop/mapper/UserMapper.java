@@ -23,5 +23,21 @@ public interface UserMapper {
      **/
     public User queryUserByUsernameAndPassword(String username,String password);
 
+    /**
+     * @Author YFAN
+     * @Description 通过用户查询用户
+     * @Date 20:50 2019/12/6/006
+     * @Param [username]
+     * @return int
+     **/
+    public User selectUserByUsername(String username);
 
+    /**
+     * @Author YFAN
+     * @Description 向用户表插入一条记录
+     * @Date 21:06 2019/12/6/006
+     * @Param [user]
+     * @return int
+     **/
+    public int insertUser(User user);
 }

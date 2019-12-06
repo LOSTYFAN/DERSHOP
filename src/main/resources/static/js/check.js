@@ -57,9 +57,9 @@ $(function(){
 			$("#con_password").val("");
 			return false ;
 		}else{
-					$("#con_password").siblings("i").text("");
-					return true ;
-				}
+			$("#con_password").siblings("i").text("");
+			return true ;
+		}
 	}
 	//检查是否同意协议
 	function testTick(){
@@ -84,20 +84,27 @@ $(function(){
 			return false;
 		} else{
 			$("#username").siblings("i").text("");
-			var userData = getUserData("userInfos");
 			return true ;
-			if(userData){
-				var data = JSON.parse(userData);
-				for(var i=0;i<data.length;i++){
-					if(data[i].username == username){
-						$("#username").siblings("i").text("*该用户已被注册。");
-						return false ;
-						break;
-					} 
-				}
-			}
 		}
 	}
+
+	$("#username").blur(function () {
+		var username = $("#username").val();
+		$.ajax({
+			data:"username="+username,
+			type:"post",
+			url:"/checkUsername",
+			success:function (data) {
+				if(data.length>0){
+					$("#username").siblings("i").text("该用户已被注册！");
+					$("#username").val("");
+				}else{
+					$("#username").siblings("i").text("");
+				}
+			}
+		});
+	});
+
 	$("form .tick").siblings("small").click(function(){
 		var src = $("form .tick").attr("src");
 		var src1 = "img/no_tick.png";
@@ -128,40 +135,50 @@ $(function(){
 	})
 	$("#submit").click(function(){
 		if (checkUser() && testTick() && testPwd() && testConpwd() && testEmail() && testPhone()) {
-			$(".reg_info form").attr("onsubmit","return true");
-			submitForm();
-	}
-		
+			$.ajax({
+				url:"/register",
+				data:$("#registerForm").serialize(),
+				type:"post",
+				success:function (data) {
+					if(data.length>0){
+						alert(data);
+					}else{
+						alert("注册成功！");
+						location.href="/toLogin";
+					}
+				}
+			})
+		}
 	})
-	//提交表单同时把用户信息保存到本地存储
-	function submitForm(){
-	var username = $("#username").val();
-	var password = $("#password").val();
-	var userInfo = {
-		username:username,
-		password:password
-	}
-	setUserInfoStorage(userInfo)
-	}
+	// //提交表单同时把用户信息保存到本地存储
+	// function submitForm(){
+	// var username = $("#username").val();
+	// var password = $("#password").val();
+	// var userInfo = {
+	// 	username:username,
+	// 	password:password
+	// }
+	// //setUserInfoStorage(userInfo)
+	// }
 
 })
 
 
 
 //设置本地存储
-function setUserInfoStorage(userInfoObj){
-	var userData = getUserData("userInfos");
-	if(!userData){
-		var userInfo = [
-			userInfoObj
-		];
-		localStorage.setItem("userInfos",JSON.stringify(userInfo))
-	}else{
-		var data = JSON.parse(userData);
-		data.push(userInfoObj);
-		localStorage.setItem("userInfos",JSON.stringify(data));
-	}
-}
-function getUserData(userKey){
-	return localStorage.getItem(userKey)
-}
+// function setUserInfoStorage(userInfoObj){
+// 	var userData = getUserData("userInfos");
+// 	if(!userData){
+// 		var userInfo = [
+// 			userInfoObj
+// 		];
+// 		localStorage.setItem("userInfos",JSON.stringify(userInfo))
+// 	}else{
+// 		var data = JSON.parse(userData);
+// 		data.push(userInfoObj);
+// 		localStorage.setItem("userInfos",JSON.stringify(data));
+// 	}
+// }
+// function getUserData(userKey){
+// 	return localStorage.getItem(userKey)
+// }

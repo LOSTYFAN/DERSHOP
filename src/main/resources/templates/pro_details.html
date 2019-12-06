@@ -16,9 +16,9 @@
 	<body>
 		<div class="header">
 			<div class="container">
-				<p>您好，欢迎来到德尔商城！</p>
+				<p th:text="${session.user!=null?session.user.realname:''}+'您好，欢迎来到德尔商城！'">您好，欢迎来到德尔商城！</p>
 				<ul>
-					<li><a th:href="@{/toLogin}">登录</a>/<a href="reg.html">注册</a></li>
+					<li><a th:href="@{/toLogin}">登录</a>/<a th:href="@{/toRegister}">注册</a></li>
 					<li><a href="shop_cart.html">购物车<i id="car_num">0</i></a></li>
 					<li><a href="order.html">我的订单</a></li>
 					<li><a href="###">企业采购</a></li>
@@ -29,7 +29,7 @@
 		<div class="logo_serach">
 			<div class="container">
 				<div class="logo">
-					<a href="index.html"><img src="../static/img/logo.jpg"/></a>
+					<a th:href="@{/index}"><img src="../static/img/logo.jpg"/></a>
 				</div>
 				<form class="serach">
 					<input type="search" name="" id="" value="" />
@@ -47,41 +47,41 @@
 					<div class="dropdown_menu hidden">
 						<ol>
 							<li class="dropdown_header"><img src="../static/img/icon_dfg.png" alt="" />厨房小电器</li>
-							<li><a href="shop_list.html">电饭煲</a></li>
-							<li><a href="shop_list.html">电磁炉</a></li>
-							<li><a href="shop_list.html">电蒸锅</a></li>
-							<li><a href="shop_list.html">电炖锅</a></li>
-							<li><a href="shop_list.html">面条机</a></li>
-							<li><a href="shop_list.html">面包机</a></li>
+							<li><a th:href="@{/shopList}">电饭煲</a></li>
+							<li><a th:href="@{/shopList}">电磁炉</a></li>
+							<li><a th:href="@{/shopList}">电蒸锅</a></li>
+							<li><a th:href="@{/shopList}">电炖锅</a></li>
+							<li><a th:href="@{/shopList}">面条机</a></li>
+							<li><a th:href="@{/shopList}">面包机</a></li>
 						</ol>
 						<ol>
 							<li class="dropdown_header"><img src="../static/img/icon_xyyj.png" alt="" />厨卫电器</li>
-							<li><a href="shop_list.html">燃气炉</a></li>
-							<li><a href="shop_list.html">吸油烟机</a></li>
-							<li><a href="shop_list.html">消毒柜</a></li>
-							<li><a href="shop_list.html">微波炉</a></li>
-							<li><a href="shop_list.html">净水器</a></li>
+							<li><a th:href="@{/shopList}">燃气炉</a></li>
+							<li><a th:href="@{/shopList}">吸油烟机</a></li>
+							<li><a th:href="@{/shopList}">消毒柜</a></li>
+							<li><a th:href="@{/shopList}">微波炉</a></li>
+							<li><a th:href="@{/shopList}">净水器</a></li>
 						</ol>
 						<ol>
 							<li class="dropdown_header"><img src="../static/img/icon_tg.png"/>炊具</li>
-							<li><a href="shop_list.html">铲勺</a></li>
-							<li><a href="shop_list.html">提锅</a></li>
-							<li><a href="shop_list.html">水壶</a></li>
-							<li><a href="shop_list.html">压力锅</a></li>
-							<li><a href="shop_list.html">炒锅</a></li>
-							<li><a href="shop_list.html">煎锅</a></li>
-							<li><a href="shop_list.html">刀具</a></li>
-							<li><a href="shop_list.html">陶瓷煲</a></li>
+							<li><a th:href="@{/shopList}">铲勺</a></li>
+							<li><a th:href="@{/shopList}">提锅</a></li>
+							<li><a th:href="@{/shopList}">水壶</a></li>
+							<li><a th:href="@{/shopList}">压力锅</a></li>
+							<li><a th:href="@{/shopList}">炒锅</a></li>
+							<li><a th:href="@{/shopList}">煎锅</a></li>
+							<li><a th:href="@{/shopList}">刀具</a></li>
+							<li><a th:href="@{/shopList}">陶瓷煲</a></li>
 						</ol>
 					</div>
 				</div>
 				<div class="nav">
 					<ul>
-						<li><a href="index.html">首页</a></li>
-						<li><a href="shop_list.html">最新产品</a></li>
-						<li><a href="shop_list.html">热门产品</a></li>
-						<li><a href="shop_list.html">推荐产品</a></li>
-						<li><a href="shop_list.html">爆款推荐</a></li>
+						<li><a th:href="@{/index}">首页</a></li>
+						<li><a th:href="@{/shopList}">最新产品</a></li>
+						<li><a th:href="@{/shopList}">热门产品</a></li>
+						<li><a th:href="@{/shopList}">推荐产品</a></li>
+						<li><a th:href="@{/shopList}">爆款推荐</a></li>
 					</ul>
 				</div>
 			</div>
