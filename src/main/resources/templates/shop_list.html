@@ -30,7 +30,7 @@
 					<a th:href="@{/index}"><img src="../static/img/logo.jpg"/></a>
 				</div>
 				<form class="serach">
-					<input type="search" name="" id="" value="" />
+					<input type="search" name="" id="name2" value="" />
 					<button type="submit"><img src="../static/img/icon_search.png"/></button>
 				</form>
 			</div>
@@ -150,7 +150,7 @@
 						</dd>
 						<dd>
 							<div class="serach">
-								<input type="text" name="" id="" value="" />
+								<input type="text" name="" id="name" value="" />
 								<button type="submit"><img src="../static/img/icon_search.png"/></button>
 							</div>
 						</dd>
@@ -159,116 +159,11 @@
 			</div>
 			<div class="pro_list container">
 				<ul>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro01.jpg" alt="" />
-							<span>家用智能消毒柜</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro02.jpg" alt="" />
-							<span>家用油烟机</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro03.jpg" alt="" />
-							<span>家用电磁炉</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro04.jpg" alt="" />
-							<span>家用智能电饭煲</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro05.jpg" alt="" />
-							<span>家用电饭煲</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro06.jpg" alt="" />
-							<span>智能电饭煲</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro07.jpg" alt="" />
-							<span>家用面包机</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro08.jpg" alt="" />
-							<span>智能电饭煲</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro09.jpg" alt="" />
-							<span>家用面包机</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro10.jpg" alt="" />
-							<span>家用微波炉</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro11.jpg" alt="" />
-							<span>大锅电饭锅</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro12.jpg" alt="" />
-							<span>家用智能锅</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro13.jpg" alt="" />
-							<span>家用热水壶</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro14.jpg" alt="" />
-							<span>家用智能锅</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro15.jpg" alt="" />
-							<span>家用电火锅</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
-						</a>
-					</li>
-					<li>
-						<a href="pro_details.html"><img src="../static/img/shop_pro16.jpg" alt="" />
-							<span>家用消毒柜</span>
-							<small>德尔CFXB43-75</small>
-							<b>￥399</b>
+					<li th:each="items : ${shoplist}">
+						<a th:href="@{/itemsDetail/(itemsid=${items.itemsid})}"><img th:src="'../static/img/goods/'+${items.pic}" alt="" class="pro_img"/>
+							<span th:text="${items.itemsname}"></span>
+							<small th:text="${items.itemsbrand}">德尔CFXB43-75</small>
+							<b th:text="'￥'+${items.price}">￥399</b>
 						</a>
 					</li>
 				</ul>

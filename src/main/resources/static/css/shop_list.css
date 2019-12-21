@@ -40,3 +40,7 @@
 .middle .pro_list ul li b{color: #ff3939;font-weight: normal;}
 .middle .pro_list ul li:hover a>*{color: #ff3333;}
 .middle .pro_list ul li:hover{box-shadow:-5px -5px 40px -10px;}
+.pro_img{
+    width: 290px;
+    height: 300px;
+}

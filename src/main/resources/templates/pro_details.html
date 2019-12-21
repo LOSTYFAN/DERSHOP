@@ -95,19 +95,19 @@
 				<div id="big_view"></div>
 				<div class="spec-list">
 					<ul>
-						<li class="pro_img on"><img src="../static/img/pro_details01.jpg"/></li>
-						<li><img src="../static/img/pro_details02.jpg"/></li>
-						<li><img src="../static/img/pro_details03.jpg"/></li>
-						<li><img src="../static/img/pro_details04.jpg"/></li>
-						<li><img src="../static/img/pro_details05.jpg"/></li>
+						<li class="pro_img on"><img th:src="'../static/img/goods/'+${items.pic}"/></li>
+						<li><img th:src="'../static/img/goods/'+${items.pic}"/></li>
+						<li><img th:src="'../static/img/goods/'+${items.pic}"/></li>
+						<li><img th:src="'../static/img/goods/'+${items.pic}"/></li>
+						<li><img th:src="'../static/img/goods/'+${items.pic}"/></li>
 					</ul>
 				</div>
 			</div>
 			<div class="itemInfo_wrap">
-				<h2 id="pro_name">豪华智能电饭煲</h2>
-				<h3>德尔 CFXBe40FD8041-86；智能家用正品</h3>
+				<h2 id="pro_name" th:text="${items.itemsname}">豪华智能电饭煲</h2>
+				<h3 th:text="${items.itemsbrand}">德尔 CFXBe40FD8041-86；智能家用正品</h3>
 				<ul>
-					<li><span>价格：</span><b id="pro_price">￥300.00</b></li>
+					<li><span>价格：</span><b id="pro_price" th:text="${'￥'+items.price}">￥300.00</b></li>
 					<li><span>容量：</span>
 						<ol id="pro_typt">
 							<li class="on">3.5L</li>
