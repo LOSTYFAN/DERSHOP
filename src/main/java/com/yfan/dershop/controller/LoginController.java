@@ -49,7 +49,6 @@ public class LoginController {
         if(code!=null && code.equalsIgnoreCase(confirmCode)){
             System.out.println("验证码正确");
             User user=loginService.login(username, password);
-            System.out.println(user==null);
             if(user==null){
                 return "用户名和密码错误！";
             }else{

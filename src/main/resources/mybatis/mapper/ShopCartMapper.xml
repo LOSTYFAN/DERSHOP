@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yfan.dershop.mapper.ShopCartMapper">
+    <select id="queryAllByUserid" resultType="com.yfan.dershop.mapper.vo.ShopCartAndItems">
+        select shopcartid,num,t_items.itemsid,itemsname,itemsdes,itemsbrand,itemstype,price,pic
+        from t_items,t_shopcart
+        where t_items.itemsid=t_shopcart.itemsid and userid=#{userid}
+    </select>
+</mapper>

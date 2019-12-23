@@ -17,7 +17,7 @@
 				<p th:text="${session.user!=null?session.user.realname:''}+'您好，欢迎来到德尔商城！'">您好，欢迎来到德尔商城！</p>
 				<ul>
 					<li><a th:href="@{/toLogin}">登录</a>/<a th:href="@{/toRegister}">注册</a></li>
-					<li><a href="shop_cart.html">购物车<i id="car_num">0</i></a></li>
+					<li><a th:href="@{/shopCartList}">购物车<i id="car_num">0</i></a></li>
 					<li><a href="order.html">我的订单</a></li>
 					<li><a href="###">企业采购</a></li>
 					<li><a href="###">帮助中心</a></li>

@@ -130,6 +130,14 @@
 						</tr>
 					</thead>
 					<tbody>
+						<tr th:each="item : ${shoplist}">
+							<td><img src="../static/img/no_tick.png" class="tick"></td>
+							<td><a href="pro_details.html"><img class="pro_img" th:src="'../static/img/goods/'+${item.pic}" alt=""></a></td>
+							<td><p class="proname"><a href="pro_details.html" th:text="${item.itemsname}">家用油烟机</a></p><p><a href="pro_details.html" th:text="${item.itemsbrand}">德尔CED-5</a></p></td>
+							<td class="price" th:text="${'￥'+item.price}">￥399</td>
+							<td class="buy_num"><button type="button" class="decline">-</button><input type="text" th:value="${item.num}"><button type="button" class="increase">+</button></td>
+							<td class="subtotal" th:text="${'￥'+item.price*item.num}">￥399</td><td><a href="javaScript:void(0)" class="del_pro">删除</a></td>
+						</tr>
 					</tbody>
 				</table>
 			</form>

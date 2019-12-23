@@ -90,8 +90,8 @@ $(function (){
 			var subtotal = parseFloat($(this).parents("td").siblings(".price").text().replace("￥",""))*num;
 			$(this).parents("td").siblings(".subtotal").text("￥"+subtotal);
 			//更新本地存储的产品数量
-			var imgsrc = $(this).parents("tr").find(".pro_img").attr("src");
-			changeCarNum(imgsrc,num,subtotal);
+			//var imgsrc = $(this).parents("tr").find(".pro_img").attr("src");
+			//changeCarNum(imgsrc,num,subtotal);
 			Pro_total();
 		})
 		$(".buy_num button.increase").click(function(){
@@ -104,13 +104,13 @@ $(function (){
 			var subtotal = parseFloat($(this).parents("td").siblings(".price").text().replace("￥",""))*num;
 			$(this).parents("td").siblings(".subtotal").text("￥"+subtotal);
 			//更新本地存储的产品数量
-			var imgsrc = $(this).parents("tr").find(".pro_img").attr("src");
-			changeCarNum(imgsrc,num,subtotal);
+			//var imgsrc = $(this).parents("tr").find(".pro_img").attr("src");
+			//changeCarNum(imgsrc,num,subtotal);
 			Pro_total();
 		})
 	}
-	var tick_src1 = "img/no_tick.png";
-	var tick_src2 = "img/tick.png";
+	var tick_src1 = "../static/img/no_tick.png";
+	var tick_src2 = "../static/img/tick.png";
 	//所有价格合计
 	function Pro_total(){
 		var trlen = $(".cart_list tbody tr").length;
