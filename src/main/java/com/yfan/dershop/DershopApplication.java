@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DershopApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DershopApplication.class, args);
+        SpringApplication.run(DershopApplication.class, args);//
     }
 }
